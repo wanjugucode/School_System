@@ -1,0 +1,44 @@
+{% include 'home.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="profile">
+        <img src="{{trainers.profile.url}}" >
+        <h5>{{trainers.full_name}}</h5>
+        <h5>{{trainers.course}} </h5>
+    
+    </div>
+    <style>
+     
+   .profile{
+    border: 2px solid black;
+    border-radius: 40px;
+    box-shadow: 30px;
+    height: 300px;
+    width: 300px;
+    margin-left: 300px;
+    text-align: center;
+    background-color: rgb(243, 212, 243);
+    }
+    img{
+        padding-top: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    h2{
+        font-size: 25px;
+    }
+    
+    </style>
+    
+    
+</body>
+</html>

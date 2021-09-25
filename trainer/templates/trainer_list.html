@@ -1,0 +1,92 @@
+{% include 'home.html' %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Student_list</title>
+</head>
+
+<body>
+ 
+  <div class="trainer-table">
+  <table>
+    <tr>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>course</th>
+      <th>gender</th>
+      <th>number_of_lessons</th>
+      <th>Profile</th>
+      <th>occupation</th>
+      <th>phone_number</th>
+      <th>bio</th>
+      <th>cv</th>
+      <th>email</th>
+      <th>contract</th>
+      <th>date_hired</th>
+      <th>language</th>
+      <th>profile</th>
+      <th>Edit</th>
+    </tr>
+    <tr>
+      {%for trainer in trainers%}
+      <td>{{trainer.first_name}}</td>
+      <td>{{trainer.last_name}}</td>
+      <td>{{trainer.course}}</td>
+      <td>{{trainer.gender}}</td>
+      <td>{{trainer.number_of_lessons}}</td>
+      <td><img src="{{trainer.profile.url}}" ></td>
+
+      <td>{{trainer.occupation}}</td>
+      <td>{{trainer.phone_number}}</td>
+      <td>{{trainer.bio}}</td>
+      <td>{{trainer.cv}}</td>
+      <td>{{trainer.email}}</td>
+      <td>{{trainer.contract}}</td>
+      <td>{{trainer.date_hired}}</td>
+      <td>{{trainer.language}}</td>
+
+      <td><a href="{% url 'trainer_profile' id=trainer.id %} ">Profile</a></td>
+
+      <td> <a href="{% url 'edit_trainer' id=trainer.id%}">Edit</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+  <style>
+    .trainer-table{
+      margin-left: 170px;
+    }
+    table, td, th {
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      padding: 15px;
+    }
+    th{
+      background-color: rgb(221, 168, 226);
+     
+      color: black;
+    }
+    tr:hover {
+      background-color:rgb(244, 240, 245);
+      cursor: pointer;
+    }
+    img{
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</body>
+
+</html>

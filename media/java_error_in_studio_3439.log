@@ -1,0 +1,32 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f885d941077, pid=3439, tid=3450
+#
+# JRE version: OpenJDK Runtime Environment (11.0.10) (build 11.0.10+0-b96-7249189)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.10+0-b96-7249189, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x8077]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x87
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms256m -Xmx1280m -XX:ReservedCodeCacheSize=512m -XX:+UseG1GC -XX:SoftRefLRUPolicyMSPerMB=50 -XX:CICompilerCount=2 -Dsun.io.useCanonCaches=false -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -Djna.nosys=true -Djna.boot.library.path= -Didea.vendor.name=Google -Dsun.tools.attach.tmp.only=true -XX:ErrorFile=/home/student/java_error_in_studio_%p.log -XX:HeapDumpPath=/home/student/java_error_in_studio_.hprof -Didea.vendor.name=Google -Didea.paths.selector=AndroidStudio2020.3 -Djb.vmOptionsFile=/snap/android-studio/114/android-studio/bin/studio64.vmoptions -Didea.platform.prefix=AndroidStudio -Didea.jre.check=true com.intellij.idea.Main
+
+Host: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, 4 cores, 7G, Ubuntu 20.04.2 LTS
+Time: Sat Aug 14 10:54:34 2021 EAT elapsed time: 9606.178761 seconds (0d 2h 40m 6s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f88581b9800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=3450, stack(0x00007f882c615000,0x00007f882c716000)]
+
+Stack: [0x00007f882c615000,0x00007f882c716000],  sp=0x00007f882c713280,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x8077]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x87
+C  [libjimage.so+0x85a9]  JIMAGE_FindResource+0xb9
+V  [libjvm.so+0x55b836]

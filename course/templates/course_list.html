@@ -1,0 +1,65 @@
+{% include 'home.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>course_list</title>
+</head>
+<body>
+  <div class="course-table">
+<table>
+<tr>
+<th>Course name</th>
+<th>Course code</th>
+<th>Course trainer</th>
+<th>Syllabus</th>
+<th>Course duration</th>
+<th>Course shedule</th>
+<th>Edit event</th>
+
+</tr>
+<tr>
+{%for course in courses%}
+<td>{{course.course_name}}</td>
+<td>{{course.course_code}}</td>
+<td>{{course.syllabus}}</td>
+<td>{{course.course_trainer}}</td>
+<td>{{course.course_duration}}</td>
+<td>{{course.course_schedule}}</td>
+<td> <a href="{% url 'edit_course' id=course.id %}">Edit</a></td>
+</div>
+
+</tr>
+{% endfor %}
+</table>
+<style>
+  .course-table{
+    margin-left: 170px;
+  }
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        padding: 15px;
+      }
+      th{
+        background-color: rgb(221, 168, 226);
+       
+        color: black;
+      }
+      tr:hover {
+        background-color:rgb(244, 240, 245);
+        cursor: pointer;
+      }
+      
+</style>
+</body>
+</html>
