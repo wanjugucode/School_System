@@ -11,7 +11,7 @@ def home(request):
     trainers=Trainer.objects.count()
     courses=Course.objects.count()
     events=Event.objects.count()
-    data={'student':students,'trainer':trainers,'course':courses,'event':events}
+    data={'students':students,'trainers':trainers,'courses':courses,'events':events}
     return render(request,'home.html',data)
    
 
