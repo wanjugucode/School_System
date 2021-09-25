@@ -40,7 +40,10 @@
       <td>{{trainer.course}}</td>
       <td>{{trainer.gender}}</td>
       <td>{{trainer.number_of_lessons}}</td>
-      <td><img src="{{trainer.profile.url}}" ></td>
+      <td> {% if trainer.image %}
+        <img src="{{ trainer.profile.url }}">
+    {% endif %}</td>
+     
 
       <td>{{trainer.occupation}}</td>
       <td>{{trainer.phone_number}}</td>
@@ -90,3 +93,5 @@
 </body>
 
 </html>
+
+<!--  <td><img src="{{trainer.profile.url}}" ></td> -->
