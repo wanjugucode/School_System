@@ -1,10 +1,11 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class Student(models.Model):
     first_name=models.CharField(max_length=12,null=True)
     last_name=models.CharField(max_length=12,null=True)
-    age=models.PositiveSmallIntegerField(null=True)
+    age=models.PositiveSmallIntegerField(null=True,blank=True)
     date_of_birth=models.DateField(max_length=10,null=True)
     roll_number=models.CharField(max_length=10,null=True)
     student_email=models.EmailField(max_length=25,null=True)
@@ -36,8 +37,14 @@ class Student(models.Model):
     language=models.CharField(max_length=6, choices =LANGAUAGE_CHOICES ,null=True)
     serial_number=models.CharField(max_length=10,null=True)
 
+
     def full_name(self):
-        return f"{self.first_name} {self.last_name}"     
+        return f"{self.first_name} {self.last_name}"    
+
+    def year_of_birth(self):
+        current_year=datetime.datetime.now().year
+        year=current_year-self.age
+        return  year
 
     
   

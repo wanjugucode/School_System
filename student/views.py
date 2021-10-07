@@ -16,6 +16,7 @@ def register_student(request):
     else:
         form=StudentRegistrationForm()
     return render(request,"register_student.html",{"form":form})
+    
 
 def student_list(request):
     students=Student.objects.all()

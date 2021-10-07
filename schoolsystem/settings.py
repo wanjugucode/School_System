@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'course',
     'event',
     'Core',
-    
+    'landing',
     'rest_framework',
 
    
@@ -97,6 +97,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    #     'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'mydb',
+    #     'USER': 'Anastasia',
+    #     'PASSWORD': 'anastasia',
+    #     'HOST': 'localhost',
+    #     'PORT': '',
+    # }
 }
 
 
