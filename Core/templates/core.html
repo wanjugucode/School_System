@@ -1,4 +1,4 @@
-{% include 'home.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,49 +8,74 @@
     <title>Document</title>
 </head>
 <body>
-<div class="register">
 
- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBdRR32kMgOB2TXaoscDKyTEraz0ZCzDs1g&usqp=CAU" alt="">
 
+<div class='logo'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYoiCbjy3cmJNN2JwQ_kDWkXtgMYKJ6DQznA&usqp=CAU" ></div>
+<div class="ul">
+<li class=" nav-list"><a href="{% url 'register_student' %}">Students</a></li>
+<li class=" nav-list"><a href="{% url 'register_trainer' %}">Trainers</a></li>
+<li class=" nav-list"><a href="{% url 'register_course' %}">Courses</a></li>
+<li class=" nav-list"><a href="{% url 'event:event_list' %}">Events</a></li>
 </div>
 
+<a href="{% url 'student_list' %}"><button>GET STARTED</button></a>
 
 
     <style>
+.logo{
 
-        ul{
-            
-            letter-spacing: none;
-            margin: 0;
-            padding-left: 20px;
-            width: 150px;
-            height: 100%;
-            background-color:rgb(105, 16, 105);
-            position: fixed;
-            list-style: none;
-            text-decoration: none;
-               }
-        li{
-            border-bottom: 18px solid rgb(105, 16, 105);
-            margin-top: 10px;
-            
-        }
-        li a{
-            display: block;
-            width: 150px;
-            color: aliceblue;
-            text-decoration: none;
-            font-size: medium;
-         
-        }
-        li a:hover{
-            background-color: antiquewhite;
-            color:rgb(105, 16, 105);
-           
-        } 
-
+  margin-right: 0%;
+  height:5px;
+  width: 10px;
  
-    </style>
+
+}
+img{
+  height:160px;
+  width: 190px;
+}
+button{
+    float: left;
+    margin-top: 12%;
+    margin-right: 5%;
+    height: 100px;
+    width: 250px;
+    margin-left: 40%;
+    background-color: rgb(92, 26, 92);
+    color:rgb(208, 194, 208);
+    font-size: 30px;
+    border-radius: 5%;
+    border: 5px solid rgb(105, 8, 100);
+
+}
+button:hover{
+    border: 5px solid rgb(105, 8, 100);
+    background-color:rgb(169, 57, 169);
+    color: white;
+   
+}
+li  {
+  list-style-type: none;
+  display: inline;
+  font-size: 24px;
+  margin-top: -10px;
+  margin-left: 190px;
+  padding-left:-10px; 
+  margin: 25px;
+  float: right;
+ 
+}
+li a{
+  text-decoration: none;
+  color:rgb(105, 16, 105)
+}
+li a:hover{
+color: white;
+background-color:rgb(105, 16, 105);
+
+}
+
+ </style>
 
 </body>
 </html>

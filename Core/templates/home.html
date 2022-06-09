@@ -8,17 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+
 <div class="register">
-    <ul class="mytop-nav">
-    <li class=" nav-li"><a href="{% url 'register_student' %}">Register student</a></li>
-    <li class=" nav-li"><a href="{% url 'register_trainer' %}">Register trainer</a></li>
-    <li class=" nav-li"><a href="{% url 'register_course' %}">Register course</a></li>
-    <li class=" nav-li"><a href="{% url 'event:event_list' %}">Register events</a></li>
+    <ul class="mytop-navi">
+    <li class=" nav-list"><a href="{% url 'register_student' %}">Register student</a></li>
+    <li class=" nav-list"><a href="{% url 'register_trainer' %}">Register trainer</a></li>
+    <li class=" nav-list"><a href="{% url 'register_course' %}">Register course</a></li>
   
-    <li class=" nav-li"><a href="{% url 'student_list' %}">View students</a></li>
-    <li class=" nav-li"><a href="{% url 'trainer_list' %}">View trainers</a></li>
-    <li class=" nav-li"><a href="{% url 'course_list' %}">View courses</a></li>
-    <li class=" nav-li"><a href="{% url 'event:calendar' %}">View event</a></li>
+    <li class=" nav-list"><a href="{% url 'student_list' %}">View students</a></li>
+    <li class=" nav-list"><a href="{% url 'trainer_list' %}">View trainers</a></li>
+    <li class=" nav-list"><a href="{% url 'course_list' %}">View courses</a></li>
+    <li class=" nav-list"><a href="{% url 'event:calendar' %}">View event</a></li>
+    <li class=" nav-list"><a href="{% url 'event:event_list' %}">Register events</a></li>
     
  </ul>
 
@@ -31,7 +32,8 @@
 
     <style>
 
-        .mytop-nav{
+
+        .mytop-navi{
             
             letter-spacing: none;
             margin: 0;
@@ -43,28 +45,27 @@
             list-style: none;
 
                }
-       .nav-li{
-            border-bottom: 18px solid rgb(105, 16, 105);
+        .nav-list{
+            padding: 18px;
             margin-top: 10px;
+            text-decoration: none;
             
         }
-       .nav-li a{
+        .nav-list a{
             display: block;
             width: 150px;
-            color: aliceblue;
+            color: white;
             text-decoration: none;
             font-size: medium;
+           
         }
-        .nav-li a:hover{
-            background-color: antiquewhite;
+        .nav-list a:hover{
+            background-color: white;
             color:rgb(105, 16, 105);
+            text-decoration: none;
            
         } 
-        .heading{
-            margin-left: 400px;
-            font-size: 70px;
-            padding-top: 80px;
-        }
+
      
  
     </style>

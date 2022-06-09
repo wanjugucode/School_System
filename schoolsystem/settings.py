@@ -50,9 +50,6 @@ INSTALLED_APPS = [
     'Core',
     'landing',
     'rest_framework',
-
-   
-   
   
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
